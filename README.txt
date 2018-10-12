@@ -13,6 +13,9 @@ In this mode the existing ACPI dump is parsed and output file is generated and c
 # acpixtract -a acpi.out
 # dptfxtract "*.dat"
 
+dptfxtract-static has the same functionality as dptfxtract, except it is linked statically.
+
+
 Refer to COPYING file for the license information.
 
 Security / Vulnerability Reporting
