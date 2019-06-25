@@ -11,7 +11,7 @@ In this mode root privilege is required. This tool will copy converted files to 
 In this mode the existing ACPI dump is parsed and output file is generated and copied to /var/run/thermald/. For example to generate acpi dump and create thermal_conf.xml manually:
 # acpidump > acpi.out
 # acpixtract -a acpi.out
-# dptfxtract "*.dat"
+# dptfxtract *.dat
 
 dptfxtract-static has the same functionality as dptfxtract, except it is linked statically.
 
