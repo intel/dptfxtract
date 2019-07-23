@@ -5,13 +5,20 @@ This is a companion tool to Linux Thermal Daemon (thermald). This tool tries to 
 
 There are two ways this tool can be used:
 - Execute on the same system as thermald
-In this mode root privilege is required. This tool will copy converted files to /var/run/thermald/ folder. This is the default folder for thermald to pickup auto generated configuration file using ACPI tables.
+In this mode root privilege is required. This tool will copy converted files to /etc/thermald/ folder. This is the default folder for thermald to pickup auto generated configuration file using ACPI tables.
 
 - Execute on existing output of Linux acpidump utilities
-In this mode the existing ACPI dump is parsed and output file is generated and copied to /var/run/thermald/. For example to generate acpi dump and create thermal_conf.xml manually:
+In this mode the existing ACPI dump is parsed and output file is generated and copied to /etc/thermald/. For example to generate acpi dump and create thermal_conf.xml manually:
 # acpidump > acpi.out
 # acpixtract -a acpi.out
 # dptfxtract *.dat
+
+- In some systems there can be multiple configuration files. For example
+thermal-conf.xml.0
+thermal-conf.xml.1
+thermal-conf.xml.auto
+
+The Linux thermald by default uses thermal-conf.xml.auto. But if the other configurations are better suited for a use case, then thermald option --config-file, can be used to pick a different configuration file.
 
 dptfxtract-static has the same functionality as dptfxtract, except it is linked statically.
 
