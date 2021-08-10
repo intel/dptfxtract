@@ -1,5 +1,10 @@
 Linux DPTF Extract Utility
 
+[
+Thermald version 2.0 and later has in built parser for thermal tables. So this utility is not required.
+Make sure that thermald "--adaptive" option is used.
+]
+
 This is a companion tool to Linux Thermal Daemon (thermald). This tool tries to reuse some of the tables used by
 "Intel ® Dynamic Platform and Thermal Framework (Intel® DPTF)" by converting to the thermal_conf.xml format used by thermald.
 
